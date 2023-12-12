@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;    
+    text-decoration: none;
+    box-sizing: border-box;
+    /* outline: solid 2px black; */
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+}
+
+.nav-bar {
+    background-color: blueviolet;
+    width: 100%;
+    height: 3.75rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-navbar{
+    display: flex;
+    flex-direction: row;
+}
+.container-hero{
+    width: 100%;
+    height: 100vh;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.hero-picture {
+    display: flex;
+    align-items: center;
+}
+.hero-img{
+    width: 100%;
+    display: block;
+    max-width: 70%;
+    margin: 0 auto;
+}
+.hero-text{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    
+}
+.hero-paragrahp{
+    line-height: 1.6;
+    font-weight: 400;
+    padding: 0.7 em 0;
+
+}
+.hero-link{
+    background-color: blueviolet;
+    color: #fff;
+    padding: 10px 30px;
+    display: inline-block;
+    margin-top: .625rem;
+    border-radius: 5%;
+    margin-bottom: .625rem;
+    box-shadow: .125rem 2px .125rem black ;
+}
+.hero-link:hover{
+    background: sandybrown;
+    color: black;
+}
+
+@media  (min-width:500px) {
+    .hero-img{
+        max-width:  60%;
+    }
+    .hero-picture{
+        flex-basis: 80%;
+    }
+    .hero-text{
+    flex-basis: 120%;
+    }
+
+    .nav-bar{
+        position: fixed;
+        top: 0;
+    }
+    .menu-navbar{
+        display: flex;
+        flex-direction: row;
+    }
+
+}
+
+@media  (min-width:680px) {
+    .container-hero{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .hero-picture{
+        order: 1;
+        flex-grow: 1;
+        align-self: center;
+        & img{
+            max-width: 80%;
+        }
+    }
+    .hero-text{
+        flex-shrink: 2;
+    }
+}
